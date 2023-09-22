@@ -1,0 +1,18 @@
+.chatcontainer{
+    min-height: calc(100vh - 70px);
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .react-chatbot-kit-chat-container {
+        width: 64vw;
+    }
+    .react-chatbot-kit-chat-bot-message{
+        margin-left: 0;
+
+    }
+    
+    
+}

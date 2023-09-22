@@ -1,0 +1,58 @@
+.widbutoon{
+    display: flex;
+    justify-content: center;
+
+    button{
+        font-size: 14px;
+    padding: 9px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    background-color: #ffffff;
+    color: #10b2d4;
+    border: 2px solid #0074d912;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+    button:hover{
+        background-color:#10b2d4;
+        color: #ffffff;
+    }
+}
+
+
+.agecontsine{
+    display: flex;
+    justify-content: center;
+    height: 5vh;
+
+    select{
+        border-radius: 13px;
+       
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        background-color: #ffffff;
+        color: #10b2d4;
+        text-align: center;
+        font-size: medium;
+    font-weight: 500;
+    border: 2px solid #0074d912;
+    }
+    select:hover{
+        background-color:#10b2d4;
+        color: #ffffff;
+
+    }
+}
+
+.countdown{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+   
+    h1{
+        color: #333;
+    }
+}
