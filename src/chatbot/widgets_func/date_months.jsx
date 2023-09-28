@@ -2,8 +2,9 @@ import React, { useEffect, useMemo, useState } from "react";
 import "./date_months.scss";
 
 const DateList = (props) => {
-  const [pickDate, setpickDate] = useState(-1);
+  const [pickDate, setpickDate] = useState(null);
   const [pickTime, setpickTime] = useState(null);
+  //console.log(pickDate);
 
   //for triggeing client side render in chat bot
   const [triggerdate, settriggerdate] = useState(false);
@@ -74,8 +75,12 @@ const DateList = (props) => {
 
   //for solour of slot date
   function handlepickdate(index, date) {
-    setpickDate(index);
-    settriggerdate(!triggerdate);
+
+    
+    setpickDate(index + 1);
+    settriggerdate(true);
+    
+    
 
     const dateformat = `${date.getDate()} ${date.toLocaleString("default", {
       month: "short",
@@ -124,7 +129,7 @@ const DateList = (props) => {
           <div className="slot" style={{ marginLeft: `-${Element * 100}px` }}>
             {dateList.map((date, index) => (
               <div
-                className={`slot_piece ${index === pickDate ? "active" : ""}`}
+                className={`slot_piece ${index === pickDate -1 ? "active" : ""}`}
                 onClick={() => handlepickdate(index, date)}
                 key={index}
               >
@@ -146,7 +151,8 @@ const DateList = (props) => {
           </div>
         </div>
 
-        <div className="timestyle">
+      {pickDate  && ( <>
+          <div className="timestyle">
           <p>Morning </p>
           <ul>{listItemsMoring}</ul>
         </div>
@@ -155,8 +161,9 @@ const DateList = (props) => {
           <p>Afternoon </p>
           <ul>{listItemsAfternoon}</ul>
         </div>
+        </>
+       )}
       </div>
-    
   );
 };
 

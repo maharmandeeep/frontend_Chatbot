@@ -22,7 +22,7 @@ function Gotit(props) {
 
     return (
 
-       fill && <div className="widbutoon" >
+        fill && <div className="widbutoon" >
             <button onClick={handleChnage}>Got it!</button>
 
         </div>

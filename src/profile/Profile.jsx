@@ -5,7 +5,7 @@ function Profile() {
   const username = useSelector((state) => state.userdetailSlice.user.name);
   const age = useSelector((state) => state.userdetailSlice.user.age);
 
-  console.log(username);
+  //console.log(username);
   return (
     <div className="profilecard">
       <p>

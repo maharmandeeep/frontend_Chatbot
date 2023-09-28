@@ -23,7 +23,7 @@ const MessageParser = ({ children, actions }) => {
     
     if(checker==="name  ko set kro"){
       actions.handleAddname(message);
-      console.log(message);
+      //console.log(message);
     }
 
     
